@@ -145,3 +145,10 @@ footer {
   padding: 2rem 1rem;
   margin-top: 3rem;
 }
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;         /* Force square shape */
+  object-fit: cover;           /* Crops instead of stretching */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
