@@ -20,7 +20,7 @@ body {
 
 header#hero {
   background: url('../images/hero-placeholder.jpg') center/cover no-repeat;
-  height: 100vh;
+  height: 60vh;
   position: relative;
   color: white;
 }
