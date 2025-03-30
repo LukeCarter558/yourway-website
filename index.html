@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,11 @@
 </head>
 <body>
   <header id="hero">
-    <div class="overlay">
+    <div class="overlay stacked-hero">
+      <div class="hero-frame">
+        <img src="images/background-border.jpg" alt="Framed background" class="hero-bg" />
+        <img src="images/logo-center.png" alt="Logo overlay" class="hero-logo" />
+      </div>
       <h1>Your Way Services</h1>
       <p>We do the jobs others won't – fast, fair, and reliable.</p>
       <a href="#contact" class="cta-button">Get a Quote</a>
@@ -37,39 +40,39 @@
       </ul>
     </section>
 
-<section id="gallery">
-  <h2>Before & After</h2>
-  <div class="gallery-grid">
-    <img src="images/20250325_122305.jpg" alt="Finished Mulch Job" />
-    <img src="images/20250224_073535.jpg" alt="Cleanup Example" />
-    <img src="20250224_093931.jpg" alt="Job 1 After" />
-    <img src="images/20250224_073555.jpg" alt="Job 3 Completion" />
-    <img src="20250224_093854.jpg" alt="Job 2 Before" />
-    <img src="20250224_073540.jpg" alt="Job 1 Before" />
-    <img src="20250224_093913.jpg" alt="Job 2 After" />
-    <img src="images/20250221_114458.jpg" alt="Job 3 Progress" />
-    <img src="images/20241117_181836.jpg" alt="Front Yard After" />
-  </div>
-</section>
+    <section id="gallery">
+      <h2>Before & After</h2>
+      <div class="gallery-grid">
+        <img src="images/20250325_122305.jpg" alt="Finished Mulch Job" />
+        <img src="images/20250224_073535.jpg" alt="Cleanup Example" />
+        <img src="20250224_093931.jpg" alt="Job 1 After" />
+        <img src="images/20250224_073555.jpg" alt="Job 3 Completion" />
+        <img src="20250224_093854.jpg" alt="Job 2 Before" />
+        <img src="20250224_073540.jpg" alt="Job 1 Before" />
+        <img src="20250224_093913.jpg" alt="Job 2 After" />
+        <img src="images/20250221_114458.jpg" alt="Job 3 Progress" />
+        <img src="images/20241117_181836.jpg" alt="Front Yard After" />
+      </div>
+    </section>
 
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <p style="text-align: center; font-weight: 500; margin-bottom: 1.5rem;">
+        Prefer to speak directly? Call us on <a href="tel:0421866619">0421 866 619</a>
+      </p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p style="display: none;">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
 
-<section id="contact">
-  <h2>Get in Touch</h2>
-  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" netlify>
-    <!-- Required for Netlify spam filtering -->
-    <input type="hidden" name="form-name" value="contact" />
-    <p style="display: none;">
-      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-    </p>
-
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <input type="mobile" name="email" placeholder="Your Mobile" optional />
-    <textarea name="message" placeholder="Tell us what you need..." rows="6" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Your Mobile (optional)" />
+        <textarea name="message" placeholder="Tell us what you need..." rows="6" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
   </main>
 
   <footer>
