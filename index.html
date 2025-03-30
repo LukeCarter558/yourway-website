@@ -54,15 +54,22 @@
 </section>
 
 
-    <section id="contact">
-      <h2>Get in Touch</h2>
-      <form name="contact" method="POST" data-netlify="true">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Tell us what you need..." required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+<section id="contact">
+  <h2>Get in Touch</h2>
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <!-- Hidden field for spam bots -->
+    <input type="hidden" name="form-name" value="contact" />
+    <p class="hidden">
+      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    </p>
+
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Tell us what you need..." rows="6" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
   </main>
 
   <footer>
