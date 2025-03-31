@@ -25,6 +25,46 @@ header#hero {
   color: white;
 }
 
+/* 🔝 Top Header */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f6f6f6;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+}
+
+.top-logo {
+  height: 50px;
+  width: auto;
+}
+
+.top-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.top-contact {
+  color: #2B2B2B;
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.top-contact:hover {
+  color: #7DC136;
+}
+
+
 header .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
