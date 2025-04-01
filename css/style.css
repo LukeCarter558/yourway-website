@@ -24,10 +24,6 @@ header#hero {
   position: relative;
   color: white;
 }
-.hero-left {
-  height: 50px;
-  width: auto;
-}
   
 /* 🔝 Top Header */
 .top-header {
