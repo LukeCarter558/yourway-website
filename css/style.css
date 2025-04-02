@@ -132,21 +132,6 @@ header#hero {
   color: #7DC136;
 }
 
-.cta-button {
-  margin-top: 1rem;
-  background: var(--primary);
-  color: white;
-  padding: 0.75rem 2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background: var(--secondary);
-}
-
 .navbar {
   background: var(--primary);
   padding: 0rem;
