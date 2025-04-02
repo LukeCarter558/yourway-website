@@ -176,14 +176,16 @@ ul li::before {
 }
 
 .waste-info {
-  background: #d8ea66;
+  background: #5ac4d9;
   padding: 3rem 1rem;
-  text-align: center;
+  margin: 0;
+  width: 100%;
 }
 
 .waste-info h2 {
   color: var(--primary);
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .waste-cards {
@@ -191,6 +193,8 @@ ul li::before {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .waste-card {
@@ -219,20 +223,13 @@ ul li::before {
   background: #83c756;
   color: white;
 }
-
 .icon-circle.orange {
   background: #fcb638;
   color: white;
 }
-
 .icon-circle.red {
   background: #ec4e65;
   color: white;
-}
-
-.waste-title {
-  margin-top: 0;
-  font-size: 1.25rem;
 }
 
 .waste-title.green {
@@ -244,6 +241,14 @@ ul li::before {
 .waste-title.red {
   color: #d33444;
 }
+
+@media (max-width: 768px) {
+  .waste-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 @media (max-width: 768px) {
   .waste-cards {
