@@ -214,6 +214,10 @@ footer {
     flex-direction: column;
   }
 
+    .hide-on-mobile {
+    display: none !important;
+  }
+
     .navbar {
     padding: 0.35rem 0;
   }
