@@ -90,20 +90,28 @@ header#hero {
     max-height: 300px;
   }
 
-  .top-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-  }
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* ✅ Vertically aligns top-left and top-right */
+  background: #f6f6f6;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+
+.top-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* ✅ Vertically centers contents inside */
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
 
   .top-logo {
     height: 80px;
     margin-bottom: 0.5rem;
-  }
-
-  .top-right {
-    align-items: center;
   }
 
   .top-contact {
