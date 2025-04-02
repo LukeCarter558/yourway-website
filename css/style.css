@@ -132,27 +132,6 @@ header#hero {
   color: #7DC136;
 }
 
-
-header .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 1rem;
-}
-
-header h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-header p {
-  font-size: 1.2rem;
-}
-
 .cta-button {
   margin-top: 1rem;
   background: var(--primary);
