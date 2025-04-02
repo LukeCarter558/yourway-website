@@ -170,7 +170,7 @@ header p {
 
 .navbar {
   background: var(--primary);
-  padding: 1rem;
+  padding: 0rem;
   text-align: center;
   position: sticky;
   top: 0;
