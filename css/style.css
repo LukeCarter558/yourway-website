@@ -11,6 +11,10 @@
   scroll-behavior: smooth;
 }
 
+.dev-hidden {
+  display: none;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
