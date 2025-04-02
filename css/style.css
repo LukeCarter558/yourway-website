@@ -171,6 +171,84 @@ ul li::before {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+.waste-info {
+  background: #d8ea66;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.waste-info h2 {
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.waste-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.waste-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 300px;
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon-circle.green {
+  background: #83c756;
+  color: white;
+}
+
+.icon-circle.orange {
+  background: #fcb638;
+  color: white;
+}
+
+.icon-circle.red {
+  background: #ec4e65;
+  color: white;
+}
+
+.waste-title {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.waste-title.green {
+  color: #5a9c3c;
+}
+.waste-title.orange {
+  color: #e5902e;
+}
+.waste-title.red {
+  color: #d33444;
+}
+
+@media (max-width: 768px) {
+  .waste-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
 /* Forms */
 form {
   background: white;
