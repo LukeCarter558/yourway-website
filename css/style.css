@@ -118,7 +118,7 @@ body {
 /* Navbar */
 .navbar {
   background: var(--primary);
-  padding: 1rem;
+  padding: 1rem 0;
   text-align: center;
   position: sticky;
   top: 0;
@@ -212,6 +212,10 @@ footer {
 @media (max-width: 768px) {
   .hero-split {
     flex-direction: column;
+  }
+
+    .navbar {
+    padding: 0.5rem 0;
   }
 
   .hero-left,
