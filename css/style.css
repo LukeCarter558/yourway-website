@@ -175,26 +175,28 @@ ul li::before {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+/* ✅ Waste Info Section */
 .waste-info {
-  background: #5ac4d9;
+  background: #f0b11c;
   padding: 3rem 1rem;
   margin: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .waste-info h2 {
-  color: var(--primary);
+  color: white;
   margin-bottom: 2rem;
   text-align: center;
+  font-size: 2rem;
 }
 
 .waste-cards {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
 }
 
 .waste-card {
@@ -202,9 +204,9 @@ ul li::before {
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  max-width: 300px;
-  flex: 1;
   min-width: 280px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
   text-align: left;
 }
 
@@ -219,27 +221,25 @@ ul li::before {
   margin-bottom: 1rem;
 }
 
-.icon-circle.green {
-  background: #83c756;
-  color: white;
-}
-.icon-circle.orange {
-  background: #fcb638;
-  color: white;
-}
-.icon-circle.red {
-  background: #ec4e65;
-  color: white;
-}
+.icon-circle.green { background: #83c756; color: white; }
+.icon-circle.orange { background: #fcb638; color: white; }
+.icon-circle.red { background: #ec4e65; color: white; }
 
-.waste-title.green {
-  color: #5a9c3c;
-}
-.waste-title.orange {
-  color: #e5902e;
-}
-.waste-title.red {
-  color: #d33444;
+.waste-title.green { color: #5a9c3c; }
+.waste-title.orange { color: #e5902e; }
+.waste-title.red { color: #d33444; }
+
+@media (min-width: 769px) {
+  .waste-cards {
+    overflow-x: unset;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .waste-card {
+    flex: 1;
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 768px) {
