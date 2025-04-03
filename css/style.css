@@ -179,7 +179,11 @@ ul li::before {
   background: #f0b11c;
   padding: 3rem 1rem;
   margin: 0;
-  width: 100%;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
   overflow-x: hidden;
 }
 
