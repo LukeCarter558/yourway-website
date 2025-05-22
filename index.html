@@ -17,18 +17,18 @@
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/scripts.js"></script>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R158ETNPY9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R158ETNPY9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-R158ETNPY9');
-</script>
+    gtag('config', 'G-R158ETNPY9');
+  </script>
 </head>
 <body>
 
-  <!-- 🔝 Top Info Header with Logo & Contact -->
+  <!-- 🖝 Top Info Header with Logo & Contact -->
   <div class="top-header">
     <div class="top-left">
       <img src="images/Rectangle Logo Screens Transparent.png" alt="Your Way Logo" class="top-logo" />
@@ -59,39 +59,40 @@
       <img src="images/20240613_092747-2.jpg" alt="Hero Image Right" class="hero-banner-img" />
     </div>
   </header>
+
   <!-- ✅ Waste Cards Section -->
-<section class="waste-info">
-  <h2 class="waste-animate">What we do!</h2>
-  <div class="waste-cards">
-    <!-- Card 1 -->
-    <div class="waste-card waste-animate">
-      <div class="icon-circle green">✔️</div>
-      <h3 class="waste-title green">Property Maintenance</h3>
-      <p><strong>Mow, Edge and Hedge.</strong><br>Full service professional yard care services.</p>
-      <p><strong>Acreage.</strong><br>We can take care of your larger property, fully insured brushcutting and slashing services.</p>
-      <p><strong>Property Clean-up.</strong><br>Preparing to sell or just can't catch up, we can do a full clean-up to reset your property including landscape demolition.</p>
-    </div>
+  <section class="waste-info">
+    <h2 class="waste-animate">What we do!</h2>
+    <div class="waste-cards">
+      <!-- Card 1 -->
+      <div class="waste-card waste-animate">
+        <div class="icon-circle green">✔️</div>
+        <h3 class="waste-title green">Property Maintenance</h3>
+        <p><strong>Mow, Edge and Hedge.</strong><br />Full service professional yard care services.</p>
+        <p><strong>Acreage.</strong><br />We can take care of your larger property, fully insured brushcutting and slashing services.</p>
+        <p><strong>Property Clean-up.</strong><br />Preparing to sell or just can't catch up, we can do a full clean-up to reset your property including landscape demolition.</p>
+      </div>
 
-    <!-- Card 2 -->
-    <div class="waste-card waste-animate">
-      <div class="icon-circle green">✔️</div>
-      <h3 class="waste-title green">Handyman Service</h3>
-      <p><strong>Basic Maintenance</strong><br>If you need taps fixed, walls patched, pictures hung, solar panels cleaned or any other small maintenance jobs, contact us for a quote.</p>
-      <p><strong>Flat Pack</strong><br>Assembly of flat pack items including kitchens and full rooms.</p>
-      <p><strong>Other Jobs</strong><br>Garden sheds, concrete removal, slab pours and many other jobs.</p>
-    </div>
+      <!-- Card 2 -->
+      <div class="waste-card waste-animate">
+        <div class="icon-circle green">✔️</div>
+        <h3 class="waste-title green">Handyman Service</h3>
+        <p><strong>Basic Maintenance</strong><br />If you need taps fixed, walls patched, pictures hung, solar panels cleaned or any other small maintenance jobs, contact us for a quote.</p>
+        <p><strong>Flat Pack</strong><br />Assembly of flat pack items including kitchens and full rooms.</p>
+        <p><strong>Other Jobs</strong><br />Garden sheds, concrete removal, slab pours and many other jobs.</p>
+      </div>
 
-    <!-- Card 3 -->
-    <div class="waste-card waste-animate">
-      <div class="icon-circle green">✔️</div>
-      <h3 class="waste-title green">Waste Management</h3>
-      <p><strong>Waste Removal</strong><br>We can come and collect the pile you’ve gathered and dump it for you.</p>
-      <p><strong>Skip Trailers</strong><br>You fill it — we dump it. Who really wants to go to the tip?</p>
-      <p><strong>Trailer Hire</strong><br>Hire trailers and other equipment — contact us for prices.</p>
-      <p><strong>Scrap Metal</strong><br>We collect and remove scrap metal from your site.</p>
+      <!-- Card 3 -->
+      <div class="waste-card waste-animate">
+        <div class="icon-circle green">✔️</div>
+        <h3 class="waste-title green">Waste Management</h3>
+        <p><strong>Waste Removal</strong><br />We can come and collect the pile you’ve gathered and dump it for you.</p>
+        <p><strong>Skip Trailers</strong><br />You fill it — we dump it. Who really wants to go to the tip?</p>
+        <p><strong>Trailer Hire</strong><br />Hire trailers and other equipment — contact us for prices.</p>
+        <p><strong>Scrap Metal</strong><br />We collect and remove scrap metal from your site.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <main>
     <!-- ✅ Services -->
@@ -129,18 +130,39 @@
       <p style="text-align: center; font-weight: 500; margin-bottom: 1.5rem;">
         Prefer to speak directly? Call us on <a href="tel:0421866619">0421 866 619</a>
       </p>
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact" />
-        <p style="display: none;">
-          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-        </p>
-
+      <form id="sms-form">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="tel" name="phone" placeholder="Your Mobile (optional)" />
         <textarea name="message" placeholder="Tell us what you need..." rows="6" required></textarea>
         <button type="submit">Send Message</button>
       </form>
+
+      <script>
+        document.getElementById("sms-form").addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const form = e.target;
+
+          const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            message: form.message.value
+          };
+
+          const response = await fetch("/.netlify/functions/send-sms", {
+            method: "POST",
+            body: JSON.stringify(formData)
+          });
+
+          if (response.ok) {
+            alert("Thanks! We’ll be in touch shortly.");
+            form.reset();
+          } else {
+            alert("Something went wrong. Please try again.");
+          }
+        });
+      </script>
     </section>
   </main>
 
