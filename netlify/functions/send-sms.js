@@ -1,17 +1,15 @@
 // netlify/functions/send-sms.js
-export async function handler(event) {
-  if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method Not Allowed' };
-  }
+const fetch = require("node-fetch");
 
-  const { name, phone, email, message } = JSON.parse(event.body);
+exports.handler = async (event) => {
+  const { name, phone, message } = JSON.parse(event.body);
 
-  const payload = {
+  const body = {
     messages: [
       {
         source: "javascript",
-        body: `New enquiry from ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
-        to: "61421866619", // Replace with your mobile e.g. 61412345678
+        body: `New lead from ${name} (${phone}): ${message}`,
+        to: "+61421866619", // Your number here in international format
         from: "YourWay"
       }
     ]
@@ -20,16 +18,23 @@ export async function handler(event) {
   const response = await fetch("https://rest.clicksend.com/v3/sms/send", {
     method: "POST",
     headers: {
-      "Authorization": "Basic " + btoa("yourwaytweed@gmail.com:E2798917-1224-97FF-91C3-71AFCCDD2F8C"), // Replace
+      "Authorization": "Basic " + Buffer.from("yourwaytweed@gmail.com:E2798917-1224-97FF-91C3-71AFCCDD2F8C").toString("base64"),
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(payload)
+    body: JSON.stringify(body)
   });
 
-  const result = await response.json();
+  const data = await response.json();
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ success: true, result })
-  };
-}
+  if (response.ok) {
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: "SMS sent successfully!" })
+    };
+  } else {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: "Failed to send SMS", details: data })
+    };
+  }
+};
