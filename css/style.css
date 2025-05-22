@@ -178,12 +178,8 @@ ul li::before {
 .waste-info {
   background: #f0b11c;
   padding: 3rem 1rem;
+  width: 100%;
   margin: 0;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  transform: translateX(-50%);
   overflow-x: hidden;
 }
 
