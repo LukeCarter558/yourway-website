@@ -279,8 +279,8 @@ footer {
     max-height: 300px;
   }
 
-  .hero-banner-img {
-    object-position: center bottom;
+ .hero-banner-img {
+    object-position: center 80%;
   }
 
   .top-header {
