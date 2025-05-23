@@ -16,5 +16,8 @@
     "url": "https://github.com/LukeCarter558/yourway-website/issues"
   },
   "homepage": "https://github.com/LukeCarter558/yourway-website#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }
