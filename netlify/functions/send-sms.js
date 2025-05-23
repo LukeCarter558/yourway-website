@@ -8,7 +8,7 @@ exports.handler = async (event) => {
     messages: [
       {
         source: "javascript",
-        body: `New lead from ${name} (${phone}): ${message}`,
+        body: `New contact from ${name}, ${email} (${phone}): ${message}`,
         to: "+61421866619", // Your number here in international format
         from: "YourWay"
       }
